@@ -1,0 +1,18 @@
+@import "~normalize.css";
+@import url("");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  // font-family: "", sans-serif;
+}
+
+.container {
+  // max-width: 992px;
+  margin: 0 auto;
+}
