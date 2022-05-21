@@ -1,0 +1,81 @@
+@import "../../../../styles/variables.scss";
+
+.tickets {
+  padding-top: 31px;
+
+  .head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .head_title,
+    .head_count {
+      font-family: "Alegreya Sans SC";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 40px;
+      color: $text-color;
+
+      & span {
+        color: #e0e0e0;
+      }
+    }
+  }
+}
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 239px;
+    height: 143px;
+    padding: 14px 16px;
+    border: 1px solid rgba(218, 218, 218, 1);
+
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+
+    .name,
+    .city {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .name {
+      font-size: 17px;
+      line-height: 23px;
+      text-transform: capitalize;
+      color: $text-color;
+      margin-bottom: 4px;
+    }
+    .city {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 17px;
+      color: rgba(0, 0, 0, 0.41);
+    }
+
+    .card_profile {
+      padding: 10px 20px;
+      background: $primary-color;
+      border: 1px solid #0d1e4b;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 15px;
+      text-transform: capitalize;
+      color: $secondary-color;
+    }
+  }
+}
