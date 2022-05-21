@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: $primary-color;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 10px 0;
+}
+
+.logo {
+  font-family: "Alegreya Sans SC";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 60px;
+  text-align: center;
+  color: $secondary-color;
+}
+
+.button_version {
+  padding: 11px 40px;
+  margin-right: 12px;
+}
+.button_profile {
+  padding: 11px 57px;
+}
+.button_version,
+.button_profile {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: $text-color;
+}
