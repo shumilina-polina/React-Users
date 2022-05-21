@@ -1,5 +1,14 @@
+import { MainPage } from "./components/MainPage/MainPage";
 import s from "./Home.module.scss";
 
 export const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <MainPage />
+      <div className="container">
+        {/* <Tickets />
+        <Area /> */}
+      </div>
+    </>
+  );
 };
