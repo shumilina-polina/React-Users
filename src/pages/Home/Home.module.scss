@@ -155,3 +155,32 @@
     }
   }
 }
+
+.group {
+  height: 81px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 38px;
+
+  &_title {
+    font-family: "Alegreya Sans SC";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 40px;
+    color: $text-color;
+    margin-right: 28px;
+    white-space: nowrap;
+  }
+
+  &_text {
+    padding-top: 9px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #939393;
+  }
+}
