@@ -21,7 +21,7 @@ button {
   outline: none;
   cursor: pointer;
   box-shadow: none;
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, opacity 0.2s ease;
   &:hover {
     box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.3);
   }
