@@ -1,10 +1,15 @@
 import { Post } from "./components/Post/Post";
+import { Publication } from "./components/Publication/Publication";
 import s from "./UserPage.module.scss";
 
 type PostType = {
   title: string;
   date: string;
   content: string;
+  id: number;
+};
+type PublicationType = {
+  title: string;
   id: number;
 };
 
@@ -22,6 +27,33 @@ export const UserPage = () => {
       title: "Twenty One Pilots",
       date: "12.01.22",
       content: "Просто шикарный альбом, ",
+    },
+  ];
+
+  const publications: PublicationType[] = [
+    {
+      id: 1,
+      title: "Twenty One Pilots",
+    },
+    {
+      id: 2,
+      title: "Twenty One Pilots",
+    },
+    {
+      id: 1,
+      title: "Twenty One Pilots",
+    },
+    {
+      id: 2,
+      title: "Twenty One Pilots",
+    },
+    {
+      id: 1,
+      title: "Twenty One Pilots",
+    },
+    {
+      id: 2,
+      title: "Twenty One Pilots",
     },
   ];
 
@@ -53,6 +85,18 @@ export const UserPage = () => {
                   date={post.date}
                   content={post.content}
                 />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className={s.public}>
+        <div className={s.wrapper}>
+          <div className="container">
+            <h2 className={s.public_title}>Публикации</h2>
+            <div className={s.public_wrapper}>
+              {publications.map((publication) => (
+                <Publication key={publication.id} title={publication.title} />
               ))}
             </div>
           </div>

@@ -85,3 +85,25 @@
     height: 143px;
   }
 }
+
+.public {
+  .wrapper {
+    border-top: 1px solid rgba(0, 0, 0, 1);
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    padding: 23px 0 41px 0;
+  }
+  &_title {
+    font-family: "Alegreya Sans SC";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 40px;
+    color: $text-color;
+    margin-bottom: 15px;
+  }
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
