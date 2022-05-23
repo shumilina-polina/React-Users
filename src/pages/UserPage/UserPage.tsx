@@ -40,19 +40,19 @@ export const UserPage = () => {
       title: "Twenty One Pilots",
     },
     {
-      id: 1,
+      id: 3,
       title: "Twenty One Pilots",
     },
     {
-      id: 2,
+      id: 4,
       title: "Twenty One Pilots",
     },
     {
-      id: 1,
+      id: 5,
       title: "Twenty One Pilots",
     },
     {
-      id: 2,
+      id: 6,
       title: "Twenty One Pilots",
     },
   ];
@@ -67,8 +67,8 @@ export const UserPage = () => {
               <span>Санкт-Петербург</span>
               <span>ivanov@mail.com</span>
               <span>+7 (821) 311-21-32</span>
-              <button className={s.message}>Написать сообщение</button>
-              <button className={s.offer}>Предложить сходить на концерт</button>
+              <button>Написать сообщение</button>
+              <button>Предложить сходить на концерт</button>
             </div>
           </div>
         </div>

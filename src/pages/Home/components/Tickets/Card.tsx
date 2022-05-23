@@ -1,7 +1,8 @@
-import { User } from "./Tickets";
 import s from "./Tickets.module.scss";
+import { User } from "./UsersSlider";
 
 export const Card = ({ name, city }: User) => {
+  console.log(name);
   return (
     <div className={s.card}>
       <div className={s.info}>
