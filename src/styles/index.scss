@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500;700&family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap");
 
 *,
+h1,
+h2,
+h3,
 *::after,
 *::before {
   box-sizing: border-box;
@@ -17,6 +20,11 @@ body {
 button {
   outline: none;
   cursor: pointer;
+  box-shadow: none;
+  transition: box-shadow 0.2s ease;
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .container {

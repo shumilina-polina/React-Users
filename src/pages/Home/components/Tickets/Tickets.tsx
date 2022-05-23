@@ -42,7 +42,7 @@ export const Tickets = () => {
 
       <Slider className={s.cards} {...settings}>
         {users.map((user) => (
-          <Card name={user.name} city={user.city} />
+          <Card key={user.name} name={user.name} city={user.city} />
         ))}
       </Slider>
     </section>

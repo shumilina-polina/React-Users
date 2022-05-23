@@ -1,1 +1,157 @@
 @import "../../styles/variables.scss";
+
+.area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 54px;
+  height: 278px;
+
+  .info {
+    width: 436px;
+
+    .title {
+      font-family: "Alegreya Sans SC";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 40px;
+      color: $text-color;
+      margin-bottom: 16px;
+    }
+    .wrapper_border {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        left: 2px;
+        top: 0;
+        border-left: 2px solid #e5e5e5;
+        z-index: -1;
+      }
+    }
+
+    .wrapper {
+      padding: 0 68px 0 42px;
+      text-align: left;
+      direction: rtl;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 222px;
+      scrollbar-color: rgba(13, 30, 75, 1) transparent;
+      scrollbar-width: thin;
+      width: 100%;
+
+      .scroll_wrapper {
+        direction: ltr;
+      }
+
+      .info_title,
+      .info_content {
+        font-family: "Open Sans";
+        font-style: normal;
+        margin-bottom: 15px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      .info_title {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+        color: $text-color;
+      }
+      .info_content {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: #939393;
+      }
+
+      &::-webkit-scrollbar {
+        background: transparent;
+        width: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: rgba(13, 30, 75, 1);
+      }
+    }
+  }
+
+  .bid {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 13px 25px 25px 25px;
+    border: 1px solid rgba(218, 218, 218, 1);
+
+    &_title {
+      font-family: "Open Sans";
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 40px;
+      color: $text-color;
+      margin-bottom: 9px;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    &_textarea {
+      resize: vertical;
+      width: 100%;
+      max-height: 140px;
+      min-height: 37px;
+      padding: 10px 20px;
+      text-align: left;
+      border: 1px solid #0d1e4b;
+      background: inherit;
+      outline: none;
+      color: $text-color;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 15px;
+      text-overflow: ellipsis;
+      transition: box-shadow 0.3s ease;
+
+      &::-webkit-resizer {
+        // background-color: transparent;
+      }
+
+      &::placeholder {
+        color: #969696;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+      &:focus {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+    }
+
+    &_button {
+      align-self: end;
+      width: min-content;
+      padding: 10px 20px;
+      background: $primary-color;
+      border: 1px solid #0d1e4b;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 15px;
+      text-transform: capitalize;
+      color: $secondary-color;
+    }
+  }
+}

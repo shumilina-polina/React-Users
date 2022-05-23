@@ -8,7 +8,56 @@ export const Home = () => {
       <MainPage />
       <div className="container">
         <Tickets />
-        {/* <Area /> */}
+        <section className={s.area}>
+          <div className={s.info}>
+            <h2 className={s.title}>О площадке</h2>
+
+            <div className={s.wrapper_border}>
+              <div className={s.wrapper}>
+                <div className={s.scroll_wrapper}>
+                  <h3 className={s.info_title}>
+                    Современная площадка для проведения концертов и других
+                    мероприятий любой сложности.
+                  </h3>
+                  <p className={s.info_content}>
+                    Мы предоставляем всю необходимую для организаторов
+                    инфраструктуру и готовые решения под все основные задачи
+                    любого события, а также современное оборудование,
+                    соответствующее самым высоким мировым стандартам.
+                  </p>
+                  <h3 className={s.info_title}>
+                    Современная площадка для проведения концертов и других
+                    мероприятий любой сложности.
+                  </h3>
+                  <p className={s.info_content}>
+                    Мы предоставляем всю необходимую для организаторов
+                    инфраструктуру и готовые решения под все основные задачи
+                    любого события, а также современное оборудование,
+                    соответствующее самым высоким мировым стандартам.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={s.bid}>
+            <div className={s.bid_wrapper}>
+              <h3 className={s.bid_title}>
+                Оставить заявку на проведение концерта
+              </h3>
+              <form>
+                <textarea
+                  tabIndex={1}
+                  placeholder="Расскажите о вашем предложении"
+                  className={s.bid_textarea}
+                  cols={10}
+                  rows={1}
+                ></textarea>
+              </form>
+            </div>
+            <button className={s.bid_button}>отправить</button>
+          </div>
+        </section>
+        <section>Group</section>
       </div>
     </>
   );
