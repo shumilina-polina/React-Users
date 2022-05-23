@@ -1,0 +1,35 @@
+@import "../../../../styles/variables.scss";
+
+.post {
+  font-family: "Open Sans";
+  font-style: normal;
+  width: 49%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 1);
+  padding: 14px 23px 17px 34px;
+
+  .head {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $text-color;
+    margin-bottom: 4px;
+
+    .title {
+      font-size: 17px;
+      line-height: 23px;
+    }
+    .date {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  .content {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.41);
+  }
+}
