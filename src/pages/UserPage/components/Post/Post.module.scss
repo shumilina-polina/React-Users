@@ -7,6 +7,18 @@
   height: 143px;
   border: 1px solid rgba(0, 0, 0, 1);
   padding: 14px 23px 17px 34px;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    .content {
+      border-radius: 10px;
+      white-space: normal;
+      transform: scale(1.1);
+      transition: transform 0.5s;
+      overflow: auto;
+    }
+  }
 
   .head {
     display: flex;
@@ -27,13 +39,21 @@
     }
   }
   .content {
+    scrollbar-color: rgba(13, 30, 75, 1) transparent;
+    scrollbar-width: thin;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    height: 40px;
     font-weight: 400;
     font-size: 12px;
     line-height: 17px;
     color: rgba(0, 0, 0, 0.41);
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(13, 30, 75, 1);
+    }
   }
 }
