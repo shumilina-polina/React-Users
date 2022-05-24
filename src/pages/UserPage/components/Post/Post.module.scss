@@ -1,14 +1,14 @@
 @import "../../../../styles/variables.scss";
 
 .post {
+  display: flex;
+  flex-direction: column;
   font-family: "Open Sans";
   font-style: normal;
   width: 320px;
   height: 143px;
   border: 1px solid rgba(0, 0, 0, 1);
   padding: 14px 23px 17px 34px;
-  display: flex;
-  flex-direction: column;
 
   &:hover {
     .content {
@@ -39,11 +39,13 @@
     }
   }
   .content {
+    display: block;
     scrollbar-color: rgba(13, 30, 75, 1) transparent;
     scrollbar-width: thin;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    // max-height: 40%;
     font-weight: 400;
     font-size: 12px;
     line-height: 17px;
@@ -56,4 +58,9 @@
       background: rgba(13, 30, 75, 1);
     }
   }
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
+import UserBlock from "../../shared/UserBlock/UserBlock";
 import { RootState } from "../../store/store";
 import { fetchPosts } from "../../store/thunks/fetchPosts";
-import { PostType, User } from "../../types/types";
-import { Post } from "./components/Post/Post";
+import {  PublicationType, User } from "../../types/types";
 import { PostsSlider } from "./components/PostsSlider";
+import { Publication } from "./components/Publication/Publication";
 import s from "./UserPage.module.scss";
-
-//записать currentUser в localStorage
 
 export const UserPage = ({ id, name, address, email, phone }: User) => {
   const dispatch = useAppDispatch();
@@ -17,49 +16,42 @@ export const UserPage = ({ id, name, address, email, phone }: User) => {
 
   const posts = useAppSelector((state: RootState) => state.postsReducer);
 
-  // const publications: PublicationType[] = [
-  //   {
-  //     id: 1,
-  //     title: "Twenty One Pilots",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Twenty One Pilots",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Twenty One Pilots",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Twenty One Pilots",
-  //   },
-  //   {
-  //     id: 5,
-  //     title: "Twenty One Pilots",
-  //   },
-  //   {
-  //     id: 6,
-  //     title: "Twenty One Pilots",
-  //   },
-  // ];
+  const publications: PublicationType[] = [
+    {
+      id: "1",
+      title: "Twenty One Pilots",
+    },
+    {
+      id: "2",
+      title: "Twenty One Pilots",
+    },
+    {
+      id: "3",
+      title: "Twenty One Pilots",
+    },
+    {
+      id: "4",
+      title: "Twenty One Pilots",
+    },
+    {
+      id: "5",
+      title: "Twenty One Pilots",
+    },
+    {
+      id: "6",
+      title: "Twenty One Pilots",
+    },
+  ];
 
   return (
     <>
-      <section className={s.user}>
-        <div className={s.wrapper}>
-          <div className="container">
-            <h2 className={s.user_title}>{name}</h2>
-            <div className={s.info}>
-              <span>{address.city}</span>
-              <span>{email}</span>
-              <span>{phone}</span>
-              <button>Написать сообщение</button>
-              <button>Предложить сходить на концерт</button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UserBlock
+        id={id}
+        name={name}
+        address={address}
+        email={email}
+        phone={phone}
+      />
       <section className={s.posts}>
         <div className={s.wrapper}>
           <div className="container">
@@ -75,9 +67,9 @@ export const UserPage = ({ id, name, address, email, phone }: User) => {
           <div className="container">
             <h2 className={s.public_title}>Публикации</h2>
             <div className={s.public_wrapper}>
-              {/* {publications.map((publication) => (
+              {publications.map((publication) => (
                 <Publication key={publication.id} title={publication.title} />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { useAppSelector } from "./hooks/redux";
 import { Home } from "./pages/Home/Home";
+import { PostPage } from "./pages/PostPage/PostPage";
 import { UserPage } from "./pages/UserPage/UserPage";
 import Header from "./shared/Header/Header";
 import { RootState } from "./store/store";
@@ -18,6 +19,18 @@ function App() {
           path="/user"
           element={
             <UserPage
+              id={id}
+              name={name}
+              address={address}
+              email={email}
+              phone={phone}
+            />
+          }
+        />
+        <Route
+          path="/post"
+          element={
+            <PostPage
               id={id}
               name={name}
               address={address}

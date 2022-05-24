@@ -1,3 +1,7 @@
+export type PublicationType = {
+  id: string;
+  title: string;
+};
 export type PostType = {
   // userId: string;
   id: string;

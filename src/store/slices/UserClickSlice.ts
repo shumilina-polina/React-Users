@@ -5,7 +5,6 @@ type Prop = {
   user: User;
 };
 
-// const f = localStorage.getItem("userClick") as string;
 const initialState: Prop = JSON.parse(
   localStorage.getItem("userClick") as string
 ) || {

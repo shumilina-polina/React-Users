@@ -5,5 +5,5 @@ type Props = {
 };
 
 export const Publication = ({ title }: Props) => {
-  return <article className={s.public}>{title}</article>;
+  return <article className={s.public}></article>;
 };
