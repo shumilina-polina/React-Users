@@ -1,5 +1,5 @@
 import s from "./Tickets.module.scss";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../../../hooks/redux";
 import { fetchUser } from "../../../../store/thunks/fetchUsers";
 import { RootState } from "../../../../store/store";
@@ -13,8 +13,6 @@ export const Tickets = () => {
   }, []);
 
   const { users } = useAppSelector((state: RootState) => state.userReducer);
-
- 
 
   return (
     <section className={s.tickets}>

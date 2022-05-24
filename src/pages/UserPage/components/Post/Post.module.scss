@@ -3,8 +3,8 @@
 .post {
   font-family: "Open Sans";
   font-style: normal;
-  width: 49%;
-  height: 100%;
+  width: 320px;
+  height: 143px;
   border: 1px solid rgba(0, 0, 0, 1);
   padding: 14px 23px 17px 34px;
 
@@ -27,6 +27,10 @@
     }
   }
   .content {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 40px;
     font-weight: 400;
     font-size: 12px;
     line-height: 17px;

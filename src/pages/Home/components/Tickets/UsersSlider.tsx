@@ -1,33 +1,12 @@
 import s from "./Tickets.module.scss";
 import Slider from "react-slick";
 import { Card } from "./Card";
-import { useAppDispatch, useAppSelector } from "../../../../hooks/redux";
-import { useEffect, useState } from "react";
-import { fetchUser } from "../../../../store/thunks/fetchUsers";
-import { RootState } from "../../../../store/store";
+import { FC } from "react";
+import { User } from "../../../../types/types";
 
-export type User = {
-  name: string;
-  city: string;
-};
+type Props = { users: User[] };
 
-export const UsersSlider = ({ users }: any) => {
-  console.log(users);
-  console.log("hi");
-
-  const staticUsers: User[] = [
-    { name: "Иванов Cемен 1", city: "Санкт-Петербург" },
-    { name: "Иванов Cемен 2", city: "Санкт-Петербург" },
-    { name: "Иванов Cемен 3", city: "Санкт-Петербург" },
-    { name: "Иванов Cемен 4", city: "Санкт-Петербург" },
-    { name: "Иванов Cемен 5", city: "Санкт-Петербург" },
-    { name: "Иванов Cемен 6", city: "Санкт-Петербург" },
-    { name: "Иванов Cемен 7", city: "Санкт-Петербург" },
-    { name: "Иванов Cемен 8", city: "Санкт-Петербург" },
-    { name: "Иванов Cемен 9", city: "Санкт-Петербург" },
-    { name: "Иванов Cемен 10", city: "Санкт-Петербург" },
-  ];
-
+export const UsersSlider: FC<Props> = (users) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -37,15 +16,11 @@ export const UsersSlider = ({ users }: any) => {
     slidesToShow: 4,
     slidesToScroll: 4,
   };
-  //со слайдером не работает api
   return (
     <>
       <Slider className={s.cards} {...settings}>
-        {users.map((user: any) => {
-          return (
-            // <Card key={user.name} name={user.name} city={user.city} />
-            <Card key={user.name} name={user.name} city={user.address.city} />
-          );
+        {users.users.map((user: User) => {
+          return <Card key={user.id} user={user} />;
         })}
       </Slider>
     </>

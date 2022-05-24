@@ -1,12 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AxiosResponse } from "axios";
-
-export type User = {
-  name: string;
-  address: {
-    city: string;
-  };
-};
+import { User } from "../../types/types";
 
 type UserState = {
   users: User[];
@@ -14,7 +8,15 @@ type UserState = {
 };
 
 const initialState: UserState = {
-  users: [{ name: "", address: { city: "" } }],
+  users: [
+    {
+      id: "",
+      name: "",
+      address: { city: "" },
+      email: "",
+      phone: "",
+    },
+  ],
   error: "",
 };
 
@@ -25,7 +27,7 @@ export const userSlice = createSlice({
     fetchUsersSuccess(state, action: PayloadAction<AxiosResponse<User[]>>) {
       state.users = action.payload.data;
     },
-    fetchCryptoError(state, action: PayloadAction<AxiosResponse<User[]>>) {
+    fetchUsersError(state, action: PayloadAction<AxiosResponse<User[]>>) {
       state.error = action.payload.statusText;
     },
   },
