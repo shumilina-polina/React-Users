@@ -9,6 +9,7 @@ export const Card = (user: { user: User }) => {
   const dispatch = useAppDispatch();
   const handleButton = () => {
     dispatch(userClickSlice.actions.clickCurrentUser(user.user));
+    localStorage.setItem("userClick", JSON.stringify(user));
   };
   return (
     <div className={s.card}>
