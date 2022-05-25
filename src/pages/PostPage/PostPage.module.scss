@@ -1,1 +1,49 @@
 @import "../../styles/variables.scss";
+
+.section_title {
+  font-family: "Alegreya Sans SC";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: $text-color;
+  margin-bottom: 15px;
+}
+
+.section_post{
+  padding-bottom: 80px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  font-style: normal;
+  border: 1px solid rgba(0, 0, 0, 1);
+  padding: 14px 23px 17px 34px;
+  margin-bottom: 20px;
+
+  .head {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $text-color;
+    margin-bottom: 4px;
+
+    .title {
+      font-size: 22px;
+    }
+    .date {
+      font-size: 17px;
+    }
+  }
+  .content {
+    display: block;
+
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.41);
+  }
+}

@@ -2,6 +2,8 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import userReducer from "./slices/UserSlice";
 import userClickReducer from "./slices/UserClickSlice";
 import postsReducer from "./slices/PostSlice";
+import commentsReducer from "./slices/CommentSlice";
+import postClickReducer from "./slices/PostClickSlice";
 
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = typeof store;
@@ -11,6 +13,8 @@ const rootReducer = combineReducers({
   userReducer,
   userClickReducer,
   postsReducer,
+  commentsReducer,
+  postClickReducer,
 });
 
 export const store = configureStore({

@@ -1,3 +1,9 @@
+export type CommentType = {
+  id: string;
+  name: string;
+  email: string;
+  body: string;
+};
 export type PublicationType = {
   id: string;
   title: string;
