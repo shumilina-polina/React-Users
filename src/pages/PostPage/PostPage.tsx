@@ -5,7 +5,15 @@ import { User } from "../../types/types";
 import { CommentsSlider } from "./components/CommentsSlider";
 import s from "./PostPage.module.scss";
 
-export const PostPage = ({ id, name, address, email, phone }: User) => {
+export const PostPage = ({
+  id,
+  name,
+  address,
+  email,
+  phone,
+  website,
+  company,
+}: User) => {
   const post = useAppSelector(
     (state: RootState) => state.postClickReducer
   ).currentPost;
@@ -18,6 +26,8 @@ export const PostPage = ({ id, name, address, email, phone }: User) => {
         address={address}
         email={email}
         phone={phone}
+        website={website}
+        company={company}
       />
       <div className="container">
         <h2 className={s.section_title}>Post</h2>

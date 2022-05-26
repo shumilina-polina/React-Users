@@ -7,7 +7,7 @@ import Header from "./shared/Header/Header";
 import { RootState } from "./store/store";
 
 function App() {
-  const { name, address, id, email, phone } = useAppSelector(
+  const { name, address, id, email, phone, website, company } = useAppSelector(
     (state: RootState) => state.userClickReducer
   ).user;
   return (
@@ -24,6 +24,8 @@ function App() {
               address={address}
               email={email}
               phone={phone}
+              website={website}
+              company={company}
             />
           }
         />
@@ -36,6 +38,8 @@ function App() {
               address={address}
               email={email}
               phone={phone}
+              website={website}
+              company={company}
             />
           }
         />

@@ -3,12 +3,12 @@ import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import UserBlock from "../../shared/UserBlock/UserBlock";
 import { RootState } from "../../store/store";
 import { fetchPosts } from "../../store/thunks/fetchPosts";
-import {  PublicationType, User } from "../../types/types";
+import { PublicationType, User } from "../../types/types";
 import { PostsSlider } from "./components/PostsSlider";
 import { Publication } from "./components/Publication/Publication";
 import s from "./UserPage.module.scss";
 
-export const UserPage = ({ id, name, address, email, phone }: User) => {
+export const UserPage = ({ id, name, address, email, phone, website,company }: User) => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchPosts(id));
@@ -51,6 +51,8 @@ export const UserPage = ({ id, name, address, email, phone }: User) => {
         address={address}
         email={email}
         phone={phone}
+        website={website}
+        company={company}
       />
       <section className={s.posts}>
         <div className={s.wrapper}>

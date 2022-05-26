@@ -15,6 +15,8 @@ const initialState: UserState = {
       address: { city: "" },
       email: "",
       phone: "",
+      website: "",
+      company: { name: "", bs: "" },
     },
   ],
   error: "",

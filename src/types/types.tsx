@@ -9,7 +9,6 @@ export type PublicationType = {
   title: string;
 };
 export type PostType = {
-  // userId: string;
   id: string;
   title: string;
   body: string;
@@ -21,4 +20,6 @@ export type User = {
   address: { city: string };
   email: string;
   phone: string;
+  website: string;
+  company: { name: string; bs: string };
 };
