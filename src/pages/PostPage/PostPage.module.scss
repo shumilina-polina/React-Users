@@ -10,8 +10,15 @@
   margin-bottom: 15px;
 }
 
-.section_post{
-  padding-bottom: 80px;
+.title_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.section_post {
+  margin-bottom: 50px;
 }
 
 .post {
@@ -46,4 +53,16 @@
     font-size: 16px;
     color: rgba(0, 0, 0, 0.41);
   }
+}
+
+.send {
+  padding: 10px 20px;
+  background: $primary-color;
+  border: 1px solid #0d1e4b;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  color: $secondary-color;
 }

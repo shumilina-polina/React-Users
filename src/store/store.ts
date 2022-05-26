@@ -4,6 +4,7 @@ import userClickReducer from "./slices/UserClickSlice";
 import postsReducer from "./slices/PostSlice";
 import commentsReducer from "./slices/CommentSlice";
 import postClickReducer from "./slices/PostClickSlice";
+import modalReducer from "./slices/ModalSlice";
 
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = typeof store;
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   postsReducer,
   commentsReducer,
   postClickReducer,
+  modalReducer,
 });
 
 export const store = configureStore({
