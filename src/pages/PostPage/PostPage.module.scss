@@ -1,12 +1,15 @@
 @import "../../styles/variables.scss";
 
-.section_title {
+.section_title_post,
+.section_title_comment {
   font-family: "Alegreya Sans SC";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 40px;
   color: $text-color;
+}
+.section_title_post {
   margin-bottom: 15px;
 }
 
@@ -65,4 +68,16 @@
   font-size: 11px;
   line-height: 15px;
   color: $secondary-color;
+}
+
+@media (max-width: 420px) {
+  .section_title_post,
+  .section_title_comment {
+    font-size: 25px;
+  }
+  .send {
+    padding: 9px 8px;
+    font-size: 12px;
+    line-height: 10px;
+  }
 }

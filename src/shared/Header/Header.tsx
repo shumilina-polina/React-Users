@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import s from "./Header.module.scss";
 
 const Header = () => {
@@ -10,7 +11,9 @@ const Header = () => {
             <button className={s.button_version}>
               Версия для слабовидящих
             </button>
-            <button className={s.button_profile}>Мой профиль</button>
+            <Link to="/">
+              <button className={s.button_profile}>Мой профиль</button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import { SyntheticEvent, useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../../../hooks/redux";
+import { useAppDispatch } from "../../../../hooks/redux";
 import { modalSlice } from "../../../../store/slices/ModalSlice";
-import { RootState } from "../../../../store/store";
 import { fetchForm } from "../../../../store/thunks/fetchForm";
 import s from "./SendForm.module.scss";
 
@@ -17,8 +16,6 @@ export const SendForm = (postId: { postId: string }) => {
         ...formValue,
       })
     );
-
-    // dispatch
 
     dispatch(modalSlice.actions.showModal(false));
     localStorage.setItem("modal-active", "false");

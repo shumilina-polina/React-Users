@@ -19,7 +19,7 @@ export const Tickets = () => {
       <div className={s.head}>
         <h1 className={s.head_title}>Купили билеты</h1>
         <span className={s.head_count}>
-          932/ <span>1000</span>
+          10/ <span>1000</span>
         </span>
       </div>
       <UsersSlider users={users} />

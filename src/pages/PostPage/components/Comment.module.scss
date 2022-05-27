@@ -64,3 +64,49 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media (max-width: 997px) {
+  .comment {
+    width: 245px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comment {
+    width: 200px;
+    height: 170px;
+    padding: 13px;
+    .name {
+      font-size: 13px;
+      line-height: 16px;
+      margin-bottom: 8px;
+    }
+    .email {
+      font-size: 10px;
+      line-height: 11px;
+      margin-bottom: 8px;
+    }
+    .content {
+      font-size: 10px;
+      line-height: 13px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .comment {
+    width: 100%;
+    // height: auto;
+    padding: 17px;
+    .name {
+      font-size: 18px;
+    }
+    .email {
+      font-size: 14px;
+    }
+    .content {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { FC, useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 import Slider from "react-slick";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { RootState } from "../../../store/store";
@@ -19,14 +20,17 @@ export const CommentsSlider = (post: Props) => {
 
   const comments = useAppSelector((state: RootState) => state.commentsReducer);
 
+  const isTablet = useMediaQuery({ query: "(max-width: 768px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 420px)" });
+
   const settings = {
     dots: true,
     infinite: true,
     arrows: false,
     focusOnSelect: true,
     speed: 700,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: isTablet ? (isMobile ? 1 : 2) : 3,
+    slidesToScroll: isTablet ? (isMobile ? 1 : 2) : 3,
   };
   return (
     <Slider className={s.comments_slider} {...settings}>

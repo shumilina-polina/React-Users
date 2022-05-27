@@ -41,7 +41,7 @@ export const PostPage = ({
       />
       <section className={s.section_post}>
         <div className="container">
-          <h2 className={s.section_title}>Пост</h2>
+          <h2 className={s.section_title_post}>Пост</h2>
           <article className={s.post}>
             <div className={s.head}>
               <h3 className={s.title}>{post.title}</h3>
@@ -50,7 +50,7 @@ export const PostPage = ({
             <p className={s.content}>{post.body}</p>
           </article>
           <div className={s.title_wrapper}>
-            <h2 className={s.section_title}>Комментарии</h2>
+            <h2 className={s.section_title_comment}>Комментарии</h2>
             <button className={s.send} onClick={handleSendButton}>
               Оставить комментарий
             </button>
