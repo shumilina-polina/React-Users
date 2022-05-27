@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Web-site with user posts and comments (React, TypeScript, Redux Toolkit)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[users-app-react.herokuapp.com](https://users-app-react.herokuapp.com/)
 
-## Available Scripts
+<p align="center">
+  <img width="316" alt="main page" src="https://user-images.githubusercontent.com/63950558/170697095-550cfb3d-332c-496e-aaca-b94bbc5d6e4d.png">
+</p>
+<p align="center">
+  <img width="316" alt="user page" src="https://user-images.githubusercontent.com/63950558/170697496-2a9ba8e9-28bf-4135-bc9d-7beb2eaca591.png">
+  <img width="316" alt="post page" src="https://user-images.githubusercontent.com/63950558/170697924-9db73558-fef8-476d-aef3-fbeabea2608f.png">
+</p>
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+* Page _**/user**_: View the posts of the selected user
+* Page _**/post**_: View comments on the selected post
+* _Leave a comment_ button: Send a comment to a user's post
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The application uses the [JSON Placeholder API](https://jsonplaceholder.typicode.com/).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+==============================================
+# Веб-сайт с постами пользователей и комментариями (React, TypeScript, Redux Toolkit)
 
-### `npm test`
+[users-app-react.herokuapp.com](https://users-app-react.herokuapp.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Описание
 
-### `npm run build`
+* Страница _**/user**_: Просмотреть посты выбранного пользователя
+* Страница _**/post**_: Просмотреть комментарии к выбранному посту
+* Кнопка _Оставить комментарий_: Отправить комментарий к посту
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+В приложении используется [JSON Placeholder API](https://jsonplaceholder.typicode.com/).
