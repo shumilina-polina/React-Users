@@ -59,7 +59,7 @@ export const PostPage = ({
         </div>
       </section>
       <Modal>
-        <SendForm />
+        <SendForm postId={post.id} />
       </Modal>
     </>
   );

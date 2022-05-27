@@ -12,6 +12,7 @@
       ),
     no-repeat url(../../../../assets/images/main-screen.png);
   background-size: cover;
+  background-position: center;
   height: 509px;
 }
 .main_wrapper {
@@ -75,5 +76,73 @@
   }
   .arrow_right {
     background-color: $secondary-color;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    height: auto;
+  }
+  .main_wrapper {
+    padding-top: 120px;
+  }
+  .info {
+    padding: 30px 0 56px;
+
+    .title {
+      font-size: 40px;
+      line-height: 50px;
+    }
+    .date {
+      font-size: 24px;
+      line-height: 20px;
+    }
+  }
+  .ticket {
+    .button_version {
+      padding: 8px 50px;
+      font-size: 11px;
+      line-height: 11px;
+    }
+
+    .arrow_left,
+    .arrow_right {
+      width: 31px;
+      height: 31px;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .main {
+    height: auto;
+  }
+  .main_wrapper {
+    padding-top: 120px;
+  }
+  .info {
+    padding: 30px 0 56px;
+
+    .title {
+      font-size: 40px;
+      line-height: 50px;
+    }
+    .date {
+      font-size: 24px;
+      line-height: 20px;
+    }
+  }
+  .ticket {
+    .button_version {
+      padding: 8px 50px;
+      font-size: 11px;
+      line-height: 11px;
+    }
+
+    .arrow_left,
+    .arrow_right {
+      width: 31px;
+      height: 31px;
+    }
   }
 }

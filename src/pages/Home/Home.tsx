@@ -11,7 +11,6 @@ export const Home = () => {
         <section className={s.area}>
           <div className={s.info}>
             <h2 className={s.title}>О площадке</h2>
-
             <div className={s.wrapper_border}>
               <div className={s.wrapper}>
                 <div className={s.scroll_wrapper}>

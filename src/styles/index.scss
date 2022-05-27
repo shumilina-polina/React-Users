@@ -17,7 +17,6 @@ body {
 }
 .global-container {
   position: relative;
-  font-family: "Open Sans", sans-serif;
 }
 
 button {
@@ -36,4 +35,24 @@ button {
 .container {
   max-width: 995px;
   margin: 0 auto;
+  overflow: hidden;
+
+}
+
+@media (max-width: 997px) {
+  .container {
+    max-width: 755px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 410px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    max-width: 330px;
+  }
 }

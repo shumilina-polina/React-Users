@@ -1,3 +1,4 @@
+import { SyntheticEvent } from "react";
 import { Link } from "react-router-dom";
 import { useAppDispatch } from "../../../../hooks/redux";
 import { userClickSlice } from "../../../../store/slices/UserClickSlice";
@@ -7,7 +8,8 @@ import s from "./Tickets.module.scss";
 
 export const Card = (user: { user: User }) => {
   const dispatch = useAppDispatch();
-  const handleButton = () => {
+  const handleButton = (e: SyntheticEvent) => {
+    e.preventDefault();
     dispatch(userClickSlice.actions.clickCurrentUser(user.user));
     localStorage.setItem("userClick", JSON.stringify(user));
   };
@@ -19,7 +21,7 @@ export const Card = (user: { user: User }) => {
       </div>
       <button className={s.card_profile} onClick={handleButton}>
         <Link className={s.link} to="/user">
-          Смотреть Профиль
+          Смотреть профиль
         </Link>
       </button>
     </div>

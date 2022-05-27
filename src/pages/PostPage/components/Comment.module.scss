@@ -33,7 +33,6 @@
     line-height: 16px;
     color: #547fed;
     font-weight: 700;
-    text-transform: capitalize;
     text-align: right;
     margin-bottom: 10px;
   }
@@ -42,7 +41,7 @@
     scrollbar-color: rgba(13, 30, 75, 1) transparent;
     scrollbar-width: thin;
     text-overflow: ellipsis;
-    // white-space: nowrap;
+    word-wrap: break-word;
     overflow: hidden;
     font-weight: 400;
     font-size: 12px;

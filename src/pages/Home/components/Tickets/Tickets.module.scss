@@ -45,11 +45,19 @@
       border: 1px solid $primary-color;
     }
 
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
     .name,
     .city {
       font-family: "Open Sans";
       font-style: normal;
       font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .name {
@@ -81,7 +89,97 @@
   }
 }
 
-.link{
+.link {
   text-decoration: none;
   color: inherit;
+}
+
+@media (max-width: 997px) {
+  .cards {
+    .card {
+      width: 185px;
+      height: 120px;
+      padding: 10px 12px;
+
+      .name {
+        font-size: 14px;
+      }
+      .city {
+        font-size: 10px;
+      }
+
+      .card_profile {
+        padding: 7px 15px;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    .card {
+      overflow: hidden;
+      width: 100px;
+      height: 90px;
+      padding: 5px 7px;
+
+      .name {
+        font-size: 9px;
+      }
+      .city {
+        font-size: 8px;
+      }
+
+      .card_profile {
+        padding: 2px 5px;
+        font-size: 6px;
+      }
+    }
+  }
+
+  .tickets {
+    margin-bottom: 70px;
+
+    .head {
+      .head_title,
+      .head_count {
+        font-size: 25px;
+        line-height: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .cards {
+    .card {
+      width: 160px;
+      padding: 8px 9px;
+
+      .name {
+        font-size: 10px;
+      }
+      .city {
+        font-size: 9px;
+      }
+
+      .card_profile {
+        padding: 5px 5px;
+        font-size: 9px;
+      }
+    }
+  }
+
+  .tickets {
+    margin-bottom: 70px;
+
+    .head {
+      .head_title,
+      .head_count {
+        font-size: 25px;
+        line-height: 35px;
+      }
+    }
+  }
 }

@@ -1,7 +1,6 @@
 import { CommentType } from "./../../types/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AxiosResponse } from "axios";
-import { PostType } from "../../types/types";
 
 type CommentState = {
   comments: CommentType[];
@@ -35,6 +34,10 @@ export const commentSlice = createSlice({
       action: PayloadAction<AxiosResponse<CommentType[]>>
     ) {
       state.error = action.payload.statusText;
+    },
+    postComments(state, action: PayloadAction<CommentType>) {
+      state.comments = [action.payload, ...state.comments];
+      console.log(state.comments[0]);
     },
   },
 });
