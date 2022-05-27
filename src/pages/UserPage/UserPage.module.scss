@@ -53,3 +53,15 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 410px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    max-width: 330px;
+  }
+}

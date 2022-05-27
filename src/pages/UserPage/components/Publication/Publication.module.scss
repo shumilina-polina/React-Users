@@ -6,3 +6,23 @@
   border: 1px solid rgba(0, 0, 0, 1);
   background: rgba(84, 127, 237, 1);
 }
+
+@media (max-width: 997px) {
+  .public {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .public {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 420px) {
+  .public {
+    width: 50px;
+  }
+}

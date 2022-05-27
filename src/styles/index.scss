@@ -35,8 +35,10 @@ button {
 .container {
   max-width: 995px;
   margin: 0 auto;
-  overflow: hidden;
+}
 
+.slick-dots button {
+  border-radius: 50px;
 }
 
 @media (max-width: 997px) {

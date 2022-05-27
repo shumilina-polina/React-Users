@@ -5,46 +5,17 @@
   margin-bottom: 25px;
 
   .wrapper {
-    border-top: 1px solid rgba(0, 0, 0, 1);
     border-bottom: 1px solid rgba(0, 0, 0, 1);
+    border-top: 1px solid rgba(0, 0, 0, 1);
   }
 
-  // &_title {
-  //   border-right: 1px solid rgba(0, 0, 0, 1);
-  //   border-left: 1px solid rgba(0, 0, 0, 1);
-  //   font-family: "Alegreya Sans SC";
-  //   font-style: normal;
-  //   font-weight: 500;
-  //   font-size: 35px;
-  //   line-height: 40px;
-  //   color: $text-color;
-  //   padding: 12px 0 12px 18px;
-  // }
-  // .info {
-  //   font-family: "Open Sans";
-  //   font-style: normal;
-  //   font-weight: 400;
-  //   font-size: 18px;
-  //   line-height: 17px;
-  //   color: $text-color;
-  //   text-align: center;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: flex-start;
-  //   border-top: 1px solid rgba(0, 0, 0, 1);
-  //   border-left: 1px solid rgba(0, 0, 0, 1);
-
-  //   & div {
-  //     border-right: 1px solid rgba(0, 0, 0, 1);
-  //     padding: 14px 21px 10px;
-  //   }
-  // }
   .buttons {
     border-right: 1px solid rgba(0, 0, 0, 1);
     border-left: 1px solid rgba(0, 0, 0, 1);
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
     & button {
       padding: 15px 0px;
       background: $primary-color;
@@ -52,13 +23,13 @@
       font-family: "Open Sans";
       font-style: normal;
       font-weight: 600;
-      font-size: 11px;
+      font-size: 13px;
       line-height: 15px;
       color: $secondary-color;
 
       padding: 15px 28px;
       &:first-of-type {
-        margin-right: 5px;
+        margin-right: 2px;
       }
     }
   }
@@ -66,7 +37,9 @@
 
 table {
   border-collapse: collapse;
-  border: 1px solid rgba(0, 0, 0, 1);
+  border-right: 1px solid rgba(0, 0, 0, 1);
+  border-left: 1px solid rgba(0, 0, 0, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
   width: 100%;
 
   .user_title {
@@ -91,6 +64,7 @@ table {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-direction: row;
     width: 100%;
     height: 80px;
 
@@ -110,6 +84,80 @@ table {
       flex-direction: column;
       justify-content: space-evenly;
       font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 997px) {
+  table {
+    .user_title {
+      font-size: 30px;
+      line-height: 35px;
+      padding: 10px 0 10px 15px;
+    }
+    .info {
+      font-size: 15px;
+      line-height: 13px;
+      height: 70px;
+
+      & td {
+        padding: 0px 19px;
+      }
+      .company {
+        font-size: 13px;
+        line-height: 13px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .user {
+    .buttons {
+      justify-content: space-evenly;
+      border: none;
+
+      & button {
+        padding: 10px 10px;
+
+        font-size: 11px;
+        line-height: 12px;
+
+        &:first-of-type {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+
+  table {
+    margin-bottom: 5px;
+    .user_title {
+      font-size: 25px;
+      line-height: 30px;
+      padding: 8px 0;
+      text-align: center;
+    }
+    .info {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      & td {
+        display: initial;
+        width: 100%;
+        padding: 5px 0px;
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+        border-right: none;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      .company {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 15px;
+      }
     }
   }
 }
