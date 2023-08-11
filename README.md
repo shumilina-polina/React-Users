@@ -21,7 +21,7 @@ The application uses the [JSON Placeholder API](https://jsonplaceholder.typicode
 ==============================================
 # Веб-сайт с постами пользователей и комментариями (React, TypeScript, Redux Toolkit)
 
-[users-app-react.herokuapp.com](https://users-app-react.herokuapp.com/)
+[react-users-4z4a.vercel.app](https://react-users-4z4a.vercel.app/)
 
 ## Описание
 
