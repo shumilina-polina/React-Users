@@ -1,6 +1,6 @@
 # Web-site with user posts and comments (React, TypeScript, Redux Toolkit)
 
-[users-app-react.herokuapp.com](https://users-app-react.herokuapp.com/)
+[react-weather-4z4a.vercel.app](https://react-weather-4z4a.vercel.app/)
 
 <p align="center">
   <img width="316" alt="main page" src="https://user-images.githubusercontent.com/63950558/170697095-550cfb3d-332c-496e-aaca-b94bbc5d6e4d.png">
